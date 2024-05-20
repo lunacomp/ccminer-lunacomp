@@ -1,0 +1,11 @@
+[Unit]
+Description=Start ccminer at boot
+After=network.target
+
+[Service]
+ExecStart=/root/start.sh
+Restart=always
+User=root
+
+[Install]
+WantedBy=multi-user.target
