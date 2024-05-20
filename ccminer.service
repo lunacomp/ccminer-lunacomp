@@ -1,14 +1,16 @@
 [Unit]
 Description=ccminer Service
-After=network.target
+Wants=network-online.target
+After=network-online.target
 
 [Service]
+Type=simple
+Restart=always
+RestartSec=5
 ExecStart=/root/start.sh
-Restart=on-failure
-RestartSec=10
 User=root
-StandardOutput=file:/var/log/ccminer.service.log
-StandardError=file:/var/log/ccminer.service.log
+StandardOutput=null
+StandardError=null
 
 [Install]
 WantedBy=multi-user.target
