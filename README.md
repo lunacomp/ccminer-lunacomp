@@ -4,6 +4,8 @@ Impor file config miner :
 ```
 cd ccminer
 wget -O ~/ccminer/run.sh https://raw.githubusercontent.com/lunacomp/ccminer-lunacomp/main/config-share && chmod +x run.sh
+cd
+curl -o start.sh -k https://raw.githubusercontent.com/lunacomp/ccminer-lunacomp/main/start.sh && chmod +x start.sh
 ````
 Membuat mining autorun pada saat boot
 ```
