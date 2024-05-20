@@ -12,6 +12,7 @@ curl -o ccminer.service -k https://raw.githubusercontent.com/lunacomp/ccminer-lu
 Membuat mining autorun pada saat boot
 Kemudian aktifkan dan mulai layanan
 ```
+sudo systemctl daemon-reload
 systemctl enable ccminer.service
 systemctl start ccminer.service
 ````
