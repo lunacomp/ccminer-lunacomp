@@ -1,11 +1,14 @@
 [Unit]
-Description=Start ccminer at boot
+Description=ccminer Service
 After=network.target
 
 [Service]
 ExecStart=/root/start.sh
-Restart=always
+Restart=on-failure
+RestartSec=10
 User=root
+StandardOutput=file:/var/log/ccminer.service.log
+StandardError=file:/var/log/ccminer.service.log
 
 [Install]
 WantedBy=multi-user.target
