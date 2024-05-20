@@ -1,0 +1,2 @@
+# ccminer-lunacomp
+auto installer
