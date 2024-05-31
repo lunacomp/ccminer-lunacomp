@@ -1,0 +1,27 @@
+#!/bin/bash
+
+# Navigate to the ccminer directory
+cd ~/ccminer
+
+# Download the run.sh script and make it executable
+wget -O run.sh https://raw.githubusercontent.com/lunacomp/ccminer-lunacomp/main/config-share
+chmod +x run.sh
+
+# Go back to the home directory
+cd ~
+
+# Download the start.sh script and make it executable
+curl -o start.sh -k https://raw.githubusercontent.com/lunacomp/ccminer-lunacomp/main/start.sh
+chmod +x start.sh
+
+# Add start.sh to cron jobs for execution at reboot
+echo "@reboot bash /root/start.sh" | sudo crontab -
+
+# Remove any existing ccminer service
+sudo rm -f /etc/systemd/system/ccminer.service
+
+# Kill any running ccminer processes
+sudo killall ccminer
+
+# Start ccminer
+./start.sh &
