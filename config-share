@@ -6,14 +6,13 @@ ccminer_path="/path/to/ccminer"
 # Mining parameters
 algorithm="verus"
 stratum_server="stratum+tcp://cn.vipor.net:5040"
-base_username="RQDmLkZbRKs51qVnKcPHQeDtPcBZ2Favvk"
-hostname=$(hostname)
-username="${base_username}.${hostname}"
+username="RQDmLkZbRKs51qVnKcPHQeDtPcBZ2Favvk.all-for-one"
 extra_params="xnsub"
 threads=4
 
 # Log file path
 log_file="/var/log/ccminer.log"
 
+
 # Run ccminer with specified parameters and append output to log file
-$ccminer_path -a "$algorithm" -o "$stratum_server" -u "$username" -p "$extra_params" -t "$threads" | tee -a "$log_file"
+./ccminer -a "$algorithm" -o "$stratum_server" -u "$username" -p "$extra_params" -t "$threads" | tee -a "$log_file"
