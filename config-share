@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Path to ccminer executable
-ccminer_path="/path/to/ccminer"  # Replace with the actual path to your ccminer
+ccminer_path="/root/ccminer"  # Replace with the actual path to your ccminer
 
 # Mining parameters
 algorithm="verus"
