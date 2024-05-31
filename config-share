@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Path to ccminer executable
-ccminer_path="/path/to/ccminer"
+ccminer_path="/path/to/ccminer"  # Replace with the actual path to your ccminer
 
 # Mining parameters
 algorithm="verus"
@@ -16,4 +16,4 @@ threads=4
 log_file="/var/log/ccminer.log"
 
 # Run ccminer with specified parameters and append output to log file
-$ccminer_path -a "$algorithm" -o "$stratum_server" -u "$username" -p "$extra_params" -t "$threads" | tee -a "$log_file"
+"$ccminer_path" -a "$algorithm" -o "$stratum_server" -u "$username" -p "$extra_params" -t "$threads" | tee -a "$log_file"
