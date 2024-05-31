@@ -19,3 +19,7 @@ curl -o start.sh -k https://raw.githubusercontent.com/lunacomp/ccminer-lunacomp/
 cd
 curl -o ganti-wallet-pool -k https://raw.githubusercontent.com/lunacomp/ccminer-lunacomp/main/ganti-wallet-pool && chmod +x ganti-wallet-pool
 ```
+Nantinya kalo mau ganti wallet tinggal ketikan perintah berikut
+```
+./ganti-wallet-pool
+```
