@@ -14,3 +14,8 @@ wget -O ~/ccminer/run.sh https://raw.githubusercontent.com/lunacomp/ccminer-luna
 cd
 curl -o start.sh -k https://raw.githubusercontent.com/lunacomp/ccminer-lunacomp/main/start.sh && chmod +x start.sh
 ```
+# Cara otomatis Ganti Wallet
+```
+cd
+curl -o ganti-wallet-pool -k https://raw.githubusercontent.com/lunacomp/ccminer-lunacomp/main/ganti-wallet-pool && chmod +x ganti-wallet-pool
+```
