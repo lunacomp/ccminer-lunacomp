@@ -26,7 +26,7 @@ Nantinya kalo mau ganti wallet tinggal ketikan perintah berikut
 # Cara ganti Wallet Solo
 ```
 cd
-curl -o ganti-wallet-pool -k https://raw.githubusercontent.com/lunacomp/ccminer-lunacomp/main/ganti-wallet-solo && chmod +x ganti-wallet-solo
+curl -o ganti-wallet-solo -k https://raw.githubusercontent.com/lunacomp/ccminer-lunacomp/main/ganti-wallet-solo && chmod +x ganti-wallet-solo
 ```
 Jalankan Perintah Berikut :
 ```
