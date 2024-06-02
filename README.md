@@ -14,7 +14,7 @@ wget -O ~/ccminer/run.sh https://raw.githubusercontent.com/lunacomp/ccminer-luna
 cd
 curl -o start.sh -k https://raw.githubusercontent.com/lunacomp/ccminer-lunacomp/main/start.sh && chmod +x start.sh
 ```
-# Cara otomatis Ganti Wallet
+# Cara otomatis Ganti Wallet Pool
 ```
 cd
 curl -o ganti-wallet-pool -k https://raw.githubusercontent.com/lunacomp/ccminer-lunacomp/main/ganti-wallet-pool && chmod +x ganti-wallet-pool
@@ -22,4 +22,13 @@ curl -o ganti-wallet-pool -k https://raw.githubusercontent.com/lunacomp/ccminer-
 Nantinya kalo mau ganti wallet tinggal ketikan perintah berikut
 ```
 ./ganti-wallet-pool
+```
+# Cara ganti Wallet Solo
+```
+cd
+curl -o ganti-wallet-pool -k https://raw.githubusercontent.com/lunacomp/ccminer-lunacomp/main/ganti-wallet-solo && chmod +x ganti-wallet-solo
+```
+Jalankan Perintah Berikut :
+```
+./ganti-wallet-solo
 ```
