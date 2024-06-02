@@ -10,7 +10,7 @@ curl -o start.sh -k https://raw.githubusercontent.com/lunacomp/ccminer-lunacomp/
 Config miner-solo sebagai berikut :
 ```
 cd ccminer
-wget -O ~/ccminer/run.sh https://raw.githubusercontent.com/lunacomp/ccminer-lunacomp/main/config-share](https://raw.githubusercontent.com/lunacomp/ccminer-lunacomp/main/config-solo && chmod +x run.sh
+wget -O ~/ccminer/run.sh https://raw.githubusercontent.com/lunacomp/ccminer-lunacomp/main/config-solo && chmod +x run.sh
 cd
 curl -o start.sh -k https://raw.githubusercontent.com/lunacomp/ccminer-lunacomp/main/start.sh && chmod +x start.sh
 ```
