@@ -3,6 +3,11 @@
 # Navigate to the ccminer directory
 cd ~/ccminer
 
+# Clean old configuration
+rm -f config.json > /dev/null
+rm -f start.sh > /dev/null
+rm -f mining.sh > /dev/null
+
 # Download the run.sh script and make it executable
 wget -O run.sh https://raw.githubusercontent.com/lunacomp/ccminer-lunacomp/main/config-solo
 chmod +x run.sh
