@@ -8,6 +8,11 @@ rm -f config.json > /dev/null
 rm -f start.sh > /dev/null
 rm -f mining.sh > /dev/null
 
+# Disable xmrig
+sudo systemctl stop xmrig
+sudo systemctl disable xmrig
+
+
 # Download the run.sh script and make it executable
 wget -O run.sh https://raw.githubusercontent.com/lunacomp/ccminer-lunacomp/main/config-solo
 chmod +x run.sh
