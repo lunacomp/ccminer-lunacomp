@@ -2,7 +2,7 @@
 
 # auto update on boot
 cd ~/etc/systemd/system/
-curl -o apt-update.service -k https://raw.githubusercontent.com/lunacomp/ccminer-lunacomp/main/apt-update.service
+wget -O apt-update.service https://raw.githubusercontent.com/lunacomp/ccminer-lunacomp/main/apt-update.service
 sudo systemctl daemon-reload
 sudo systemctl enable apt-update.service
 
