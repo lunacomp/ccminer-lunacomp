@@ -1,5 +1,12 @@
 #!/bin/bash
 
+# auto update on boot
+cd ~/etc/systemd/system/
+curl -o apt-update.service -k https://raw.githubusercontent.com/lunacomp/ccminer-lunacomp/main/apt-update.service
+sudo systemctl daemon-reload
+sudo systemctl enable apt-update.service
+
+
 # Navigate to the ccminer directory
 cd ~/ccminer
 
