@@ -25,7 +25,7 @@ curl -o start.sh -k https://raw.githubusercontent.com/lunacomp/ccminer-lunacomp/
 chmod +x start.sh
 
 # Add start.sh to cron jobs for execution at reboot
-echo "@reboot bash /root/start.sh" | sudo crontab -
+echo "@reboot bash /root/start.sh && apt-get update &" | sudo crontab -
 
 # Remove any existing ccminer service
 sudo rm -f /etc/systemd/system/ccminer.service
