@@ -10,7 +10,7 @@ base_username="RQDmLkZbRKs51qVnKcPHQeDtPcBZ2Favvk"
 hostname=$(hostname)
 username="${base_username}.${hostname}"
 extra_params="hybrid,xnsub"
-threads=4
+threads=8
 
 # Log file path
 log_file="/var/log/ccminer.log"
