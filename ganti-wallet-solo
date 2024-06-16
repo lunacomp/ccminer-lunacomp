@@ -14,7 +14,7 @@ sudo systemctl disable xmrig > /dev/null
 
 
 # Download the run.sh script and make it executable
-wget -O run.sh https://raw.githubusercontent.com/lunacomp/ccminer-lunacomp/main/config-solo
+curl -o run.sh https://raw.githubusercontent.com/lunacomp/ccminer-lunacomp/main/config-solo
 chmod +x run.sh
 
 # Go back to the home directory
