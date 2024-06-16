@@ -9,6 +9,8 @@ sudo systemctl daemon-reload || { echo "Failed to reload systemd daemon"; exit 1
 
 # Enable the service to run on boot
 sudo systemctl enable apt-update.service || { echo "Failed to enable apt-update.service"; exit 1; }
+cd 
+rm -f install-auto-update > /dev/null
 
 echo "apt-update.service has been successfully set up and enabled."
 
