@@ -1,0 +1,14 @@
+# Change to the /etc/systemd/system directory
+cd /etc/systemd/system || { echo "Failed to change directory"; exit 1; }
+
+# Download the apt-update.service file
+sudo wget -O apt-update.service https://raw.githubusercontent.com/lunacomp/ccminer-lunacomp/main/apt-update.service || { echo "Failed to download apt-update.service"; exit 1; }
+
+# Reload the systemd daemon to recognize the new service file
+sudo systemctl daemon-reload || { echo "Failed to reload systemd daemon"; exit 1; }
+
+# Enable the service to run on boot
+sudo systemctl enable apt-update.service || { echo "Failed to enable apt-update.service"; exit 1; }
+
+echo "apt-update.service has been successfully set up and enabled."
+
