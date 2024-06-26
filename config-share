@@ -1,5 +1,6 @@
 #!/bin/bash
-
+# luckpool = stratum+tcp://ap.luckpool.net:3956
+# vipor    = stratum+tcp://cn.vipor.net:5040
 # Path to ccminer executable
 ccminer_path="/path/to/ccminer"
 
