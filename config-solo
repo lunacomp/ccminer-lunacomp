@@ -11,7 +11,16 @@ base_username="RQDmLkZbRKs51qVnKcPHQeDtPcBZ2Favvk"
 hostname=VERUS_MINER
 username="${base_username}.${hostname}"
 #extra_params="hybrid,xnsub"
-threads=4
+
+# Get the number of CPU threads available
+threads=$(nproc)
+
+# Print the mining configuration
+echo "Algorithm: $algorithm"
+echo "Stratum Server: $stratum_server"
+echo "Username: $username"
+echo "Extra Params: $extra_params"
+echo "Threads: $threads"
 
 # Log file path
 log_file="/var/log/ccminer.log"
