@@ -15,25 +15,25 @@ username="${base_username}.${hostname}"
 # Get the number of CPU threads available
 threads=$(nproc)
 
+# Print the mining configuration
+echo "Algorithm: $algorithm"
+echo "Stratum Server: $stratum_server"
+echo "Username: $username"
+echo "Extra Params: $extra_params"
+echo "Threads: $threads"
+
 # Log file path
 log_file="/var/log/ccminer.log"
 
-# Function to run ccminer
-run_miner() {
-    echo "Starting ccminer with the following configuration:"
-    echo "Algorithm: $algorithm"
-    echo "Stratum Server: $stratum_server"
-    echo "Username: $username"
-    echo "Extra Params: $extra_params"
-    echo "Threads: $threads"
-    
-    # Run ccminer with specified parameters and append output to log file
-    ./ccminer -a "$algorithm" -o "$stratum_server" -u "$username" -p "$extra_params" -t "$threads" | tee -a "$log_file"
-}
-
-# Infinite loop to restart miner if it crashes
-while true; do
-    run_miner
-    echo "ccminer stopped. Restarting in 10 seconds..."
-    sleep 10
+# Infinite loop to keep the miner running
+while true
+do
+  echo "Starting ccminer..."
+  
+  # Run ccminer with specified parameters and append output to log file
+  $ccminer_path -a "$algorithm" -o "$stratum_server" -u "$username" -p "$extra_params" -t "$threads" | tee -a "$log_file"
+  
+  # If the miner exits, wait for 10 seconds before restarting
+  echo "ccminer stopped. Restarting in 10 seconds..."
+  sleep 10
 done
