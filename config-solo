@@ -2,7 +2,7 @@
 # luckpool = stratum+tcp://ap.luckpool.net:3956
 # vipor    = stratum+tcp://cn.vipor.net:5045
 # Path to ccminer executable
-ccminer_path="/path/to/ccminer"
+ccminer_path="/root/ccminer"
 
 # Mining parameters
 algorithm="verus"
