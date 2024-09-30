@@ -1,39 +1,31 @@
 #!/bin/bash
 # luckpool = stratum+tcp://ap.luckpool.net:3956
-# vipor    = stratum+tcp://cn.vipor.net:5045
+# vipor    = stratum+tcp://cn.vipor.net:5040
 # Path to ccminer executable
-ccminer_path="/root/ccminer"
+ccminer_path="/path/to/ccminer"
 
 # Mining parameters
 algorithm="verus"
 stratum_server="stratum+tcp://ap.luckpool.net:3956"
 base_username="RQDmLkZbRKs51qVnKcPHQeDtPcBZ2Favvk"
 hostname=$(hostname)
+#hostname=VERUS_MINER
 username="${base_username}.${hostname}"
-#extra_params="hybrid"
+#extra_params="xnsub"
 
 # Get the number of CPU threads available
 threads=$(nproc)
 
+# Print the mining configuration
+echo "Algorithm: $algorithm"
+echo "Stratum Server: $stratum_server"
+echo "Username: $username"
+echo "Extra Params: $extra_params"
+echo "Threads: $threads"
+
 # Log file path
 log_file="/var/log/ccminer.log"
 
-# Function to run ccminer
-run_miner() {
-    echo "Starting ccminer with the following configuration:"
-    echo "Algorithm: $algorithm"
-    echo "Stratum Server: $stratum_server"
-    echo "Username: $username"
-    echo "Extra Params: $extra_params"
-    echo "Threads: $threads"
-    
-    # Run ccminer with specified parameters and append output to log file
-    ./ccminer -a "$algorithm" -o "$stratum_server" -u "$username" -p "$extra_params" -t "$threads" | tee -a "$log_file"
-}
 
-# Infinite loop to restart miner if it crashes
-while true; do
-    run_miner
-    echo "ccminer stopped. Restarting in 10 seconds..."
-    sleep 10
-done
+# Run ccminer with specified parameters and append output to log file
+./ccminer -a "$algorithm" -o "$stratum_server" -u "$username" -p "$extra_params" -t "$threads" | tee -a "$log_file"
